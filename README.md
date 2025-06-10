@@ -1,4 +1,4 @@
-# Especificação do Trabalho - App de Controle Financeiro
+# Especificação do Trabalho - App Controle de Pedidos
 
 **Aluno:** Fabio Willian Lima Ramos
 
