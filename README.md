@@ -2,50 +2,81 @@
 
 **Aluno:** Fabio Willian Lima Ramos
 
-## Visão Geral do Software:
-Este projeto visa criar um aplicativo de controle financeiro, desenvolvido em Android Studio utilizando Java. O objetivo é permitir que o usuário gerencie seus gastos de maneira eficiente, registrando entradas e saídas de dinheiro, categorizando seus gastos e gerando relatórios para facilitar o acompanhamento de seu orçamento.
+## Visão Geral do Software
+O aplicativo é uma plataforma de pedidos de comida que permite aos usuários se cadastrarem, fazerem login, visualizarem itens disponíveis para pedido, adicionarem itens ao pedido, confirmarem pedidos e visualizarem pedidos feitos anteriormente. O aplicativo também envia notificações com som personalizado ao confirmar um pedido.
 
-## Funcionalidades Principais:
+## Papéis e Usuários
+### Usuários
+- **Cliente**: Usuário que utiliza o aplicativo para fazer pedidos de comida.
 
-- **Criação de Categorias:**  
-  O usuário pode criar categorias personalizadas para organizar suas despesas (por exemplo, Alimentação, Transporte, Lazer, etc.).
+### O que cada usuário pode fazer
+- **Cliente**:
+  - Cadastrar-se no aplicativo.
+  - Fazer login no aplicativo.
+  - Visualizar itens disponíveis para pedido.
+  - Adicionar itens ao pedido.
+  - Confirmar pedidos.
+  - Visualizar pedidos feitos anteriormente.
+  - Receber notificações ao confirmar um pedido.
 
-- **Registros de Entradas e Saídas:**  
-  O aplicativo permitirá o usuário registrar suas entradas (receitas) e saídas (despesas), com a possibilidade de detalhar o valor e a categoria.
+## Requisitos Funcionais
+### Cadastro de Usuário
+- O sistema deve permitir que o usuário se cadastre com nome, telefone, email e senha.
+- O sistema deve garantir que o nome não contenha números.
+- O sistema deve criptografar a senha antes de armazená-la no banco de dados.
 
-- **Relatório de Gastos:**  
-  O usuário poderá gerar relatórios financeiros com base nos dados registrados, visualizando os gastos por categoria e período (mensal, semanal, etc.).
+### Login de Usuário
+- O sistema deve permitir que o usuário faça login com email e senha.
+- O sistema deve verificar a senha criptografada ao fazer login.
 
-## Papéis dos Usuários:
+### Menu Principal
+- O sistema deve exibir um menu principal com opções para fazer um pedido e ver pedidos feitos.
 
-- **Usuário Comum:**  
-  O usuário pode criar uma conta, cadastrar suas entradas e saídas, definir categorias para suas despesas, e gerar relatórios de seus gastos.
+### Fazer Pedido
+- O sistema deve exibir uma lista de itens disponíveis para pedido.
+- O sistema deve permitir que o usuário adicione itens ao pedido.
+- O sistema deve exibir o total do pedido.
+- O sistema deve permitir que o usuário confirme o pedido.
+- O sistema deve enviar uma notificação com som personalizado ao confirmar o pedido.
 
-## Requisitos Funcionais:
+### Ver Pedidos Feitos
+- O sistema deve exibir uma lista de pedidos feitos pelo usuário.
+- O sistema deve exibir uma mensagem caso não haja pedidos feitos.
+- O sistema deve permitir que o usuário volte ao menu principal.
 
-1. O app deve permitir o **cadastro de usuário**.
-2. O app deve permitir ao usuário **adicionar e visualizar entradas e saídas** de dinheiro.
-3. O app deve possibilitar a **criação de categorias personalizadas** para cada tipo de gasto.
-4. O app deve **gerar relatórios** sobre os gastos, com opções de filtragem por categoria e período.
+## Requisitos Não Funcionais
+### Segurança
+- O sistema deve criptografar a senha do usuário usando a biblioteca `bcrypt`.
+- O sistema deve garantir que a senha criptografada seja verificada ao fazer login.
 
-## Armazenamento:
-Utilização de **banco de dados** para armazenar os dados dos usuários, registros de entradas e saídas, e categorias criadas.
+### Notificações
+- O sistema deve criar um canal de notificação para pedidos.
+- O sistema deve enviar notificações com som personalizado ao confirmar um pedido.
 
-## Requisitos Obrigatórios:
+### Interface do Usuário
+- O sistema deve usar cores e strings definidas nos arquivos `colors.xml` e `strings.xml`.
+- O sistema deve exibir mensagens de erro e sucesso apropriadas.
 
-- **Tela Inicial de Login e Cadastro de Usuário:**  
-  O app terá uma tela de login, com a opção de cadastro, onde o usuário pode criar uma conta com foto e senha (armazenada como hash).
+### Desempenho
+- O sistema deve carregar itens e pedidos de forma assíncrona para evitar travamentos na interface do usuário.
 
-- **Tratamento de Erros:**  
-  O app irá tratar erros como campos vazios, entradas inválidas (por exemplo, texto em campos numéricos) e outros erros comuns.
+## Entradas Necessárias
+- Nome, telefone, email e senha para cadastro de usuário.
+- Email e senha para login de usuário.
+- Seleção de itens para fazer um pedido.
 
-## Requisitos Recomendados:
+## Processamento Realizado pelo App
+- Criptografia da senha do usuário ao cadastrar.
+- Verificação da senha criptografada ao fazer login.
+- Carregamento de itens disponíveis para pedido.
+- Adição de itens ao pedido.
+- Cálculo do total do pedido.
+- Armazenamento de pedidos no banco de dados.
+- Envio de notificações ao confirmar um pedido.
 
-- **Usabilidade:**  
-  O app será desenvolvido com uma interface **intuitiva**, de fácil navegação e esteticamente agradável.
-
-- **Acessibilidade:**  
-  Consideração de recursos que atendem às necessidades de **usuários com deficiências**.
-
-- **Segurança:**  
-  **Criptografia da senha** e controle de acesso seguro aos dados do usuário.
+## Relatórios e Saídas do App
+- Lista de itens disponíveis para pedido.
+- Total do pedido.
+- Notificações de confirmação de pedido.
+- Lista de pedidos feitos pelo usuário.
+- Mensagens de erro e sucesso apropriadas.
